@@ -1,0 +1,11 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --gray-50: #f7f7f7;
+  --gray-100: #f4f4f4;
+  --gray-900: #111111;
+  
+  /* Transparency */
+  --overlay-dark: rgba(0, 0, 0, 0.55);
+  --overlay-light: rgba(255, 255, 255, 0.15);
+}
