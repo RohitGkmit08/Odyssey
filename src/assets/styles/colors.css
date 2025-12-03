@@ -1,15 +1,11 @@
 :root {
-  /* Basic Colors */
-  --color-white: #ffffff;
-  --color-black: #000000;
-  --color-light: #f4f4f4;
-  --color-dark: #111111;
-
-  /* Hero Colors */
-  --hero-text: #ffffff;
-  --hero-border: #ffffff;
-
-  /* Footer */
-  --footer-bg: #000000;
-  --footer-text: #ffffff;
+  --white: #ffffff;
+  --black: #000000;
+  --gray-50: #f7f7f7;
+  --gray-100: #f4f4f4;
+  --gray-900: #111111;
+  
+  /* Transparency */
+  --overlay-dark: rgba(0, 0, 0, 0.55);
+  --overlay-light: rgba(255, 255, 255, 0.15);
 }
