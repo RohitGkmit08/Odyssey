@@ -1,23 +1,26 @@
 .header-container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 40px;
+  background: var(--navbar-bg);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
-
 .logo {
   font-size: 24px;
   font-weight: bold;
-  color: black;
+  color: var(--color-black);
 }
-
 .nav-links {
   display: flex;
   gap: 30px;
 }
-
-.nav-links a {
+.nav-links a {  
+  color: var(--navbar-link);   
   text-decoration: none;
   padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
 }
+

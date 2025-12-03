@@ -10,25 +10,22 @@
   justify-content: center;
   align-items: center;
 }
-
 .hero-image {
   width: 100%;
   height: 350px;
   object-fit: cover;
 }
-
 .hero-foreground {
   position: absolute;
 }
-
 .hero-text {
-  color: #ffffff;
+  color: var(--hero-text);
   text-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
   font-size: 50px;
   font-weight: 800;
   text-align: center;
   padding: 12px 20px;
-  border: 4px solid white;
+  border: 4px solid var(--hero-border);
   border-radius: 8px;
   max-width: 700px;
   margin: 0 auto;
