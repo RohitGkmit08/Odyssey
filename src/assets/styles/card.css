@@ -14,6 +14,66 @@
   margin-bottom: 30px;
   color: var(--gray-900);
 }
+.crud-panel {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-100);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 28px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+}
+.crud-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.crud-form .grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.crud-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: var(--gray-800);
+}
+.crud-form input,
+.crud-form textarea {
+  padding: 10px 12px;
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: var(--white);
+}
+.crud-form textarea {
+  resize: vertical;
+}
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.button-row button {
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  background: var(--gray-900);
+  color: var(--white);
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+.button-row button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+.crud-status {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--gray-700);
+}
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -70,6 +130,10 @@
   .cards-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px 20px;
+  }
+
+  .crud-form .grid {
+    grid-template-columns: 1fr;
   }
 
   .card-image img {

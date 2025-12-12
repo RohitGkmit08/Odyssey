@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../assets/styles/main.css" />
+  <script src="../JS/cards.js"></script>
+  <title>Manage Destinations - Odyssey</title>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">ODYSSEY</div>
+      <nav>
+        <div class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="#">Destinations</a>
+          <a href="#">Login</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="#">Feedback</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="destinations">
+    <div class="destinations-container">
+      <h2 class="destinations-title">Manage Destinations</h2>
+
+      <div class="crud-panel">
+        <form id="destinationForm" class="crud-form">
+          <div class="grid">
+            <label>
+              ID (for update/delete)
+              <input id="destId" type="number" min="1" placeholder="Auto for new" />
+            </label>
+            <label>
+              Name *
+              <input id="destName" type="text" placeholder="Saved image name" required />
+            </label>
+            <label>
+              Price *
+              <input id="destPrice" type="text" placeholder="From Rs.90,000" required />
+            </label>
+            <label>
+              Image filename *
+              <input id="destImg" type="text" placeholder="Paris.png" required />
+            </label>
+          </div>
+          <label>
+            Description *
+            <textarea id="destDescription" rows="2" placeholder="City of Light" required></textarea>
+          </label>
+          <div class="button-row">
+            <button type="button" id="createBtn">Add</button>
+            <button type="button" id="updateBtn">Update</button>
+            <button type="button" id="deleteBtn">Delete</button>
+            <button type="button" id="resetBtn">Reset to Defaults</button>
+            <button type="button" id="refreshBtn">Refresh</button>
+          </div>
+          <p class="crud-status" id="crudStatus">Ready.</p>
+        </form>
+      </div>
+
+      <div class="cards-grid" id="cardsGrid"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <nav class="footer-links">
+        <a href="#">Instagram</a>
+        <a href="#">X</a>
+        <a href="#">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
+
