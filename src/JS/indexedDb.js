@@ -127,6 +127,8 @@ async function init() {
 
     await openDatabase();
     await loadAndRenderDestinations();
+    console.log("INIT: running init()");
+
   } catch (err) {
     console.error("Init failed", err);
   }
