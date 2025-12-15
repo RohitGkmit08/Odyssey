@@ -68,7 +68,6 @@ const bindUI = () => {
   const resetBtn = document.getElementById("resetBtn");
   const refreshBtn = document.getElementById("refreshBtn");
 
-  // CREATE
   createBtn?.addEventListener("click", async () => {
     const { name, price, img, description } = readForm();
     if (!name || !price || !img || !description)
@@ -83,7 +82,6 @@ const bindUI = () => {
     }
   });
 
-  // UPDATE
   updateBtn?.addEventListener("click", async () => {
     const { id, name, price, img, description } = readForm();
     if (!id) return setStatus("ID required for update.", true);
@@ -97,7 +95,6 @@ const bindUI = () => {
     }
   });
 
-  // DELETE
   deleteBtn?.addEventListener("click", async () => {
     const { id } = readForm();
     if (!id) return setStatus("ID required for delete.", true);
@@ -111,7 +108,6 @@ const bindUI = () => {
     }
   });
 
-  // RESET
   resetBtn?.addEventListener("click", async () => {
     try {
       await clearDatabase();
@@ -125,7 +121,6 @@ const bindUI = () => {
     }
   });
 
-  // REFRESH
   refreshBtn?.addEventListener("click", async () => {
     try {
       const data = await window.destinationsAPI.get();

@@ -113,7 +113,7 @@ async function loadAndRenderDestinations() {
       list = await getAllDestinations();
     }
 
-    renderCards(list); // renderCards comes from cards.js
+    renderCards(list); 
   } catch (err) {
     console.error(err);
     if (cardsGrid) cardsGrid.innerHTML = `<p>Failed to load destinations.</p>`;
