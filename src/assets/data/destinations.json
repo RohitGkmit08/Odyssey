@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "img": "Paris.png",
+    "price": "From Rs.89,999",
+    "name": "Paris",
+    "description": "City of Light"
+  },
+  {
+    "id": 2,
+    "img": "Tokyo.png",
+    "price": "From RS.1,05,000",
+    "name": "Tokyo",
+    "description": "Tradition & Technology"
+  },
+  {
+    "id": 3,
+    "img": "London.png",
+    "price": "From Rs.99,500",
+    "name": "London",
+    "description": "Royal Heritage"
+  },
+  {
+    "id": 4,
+    "img": "Dubai.png",
+    "price": "From Rs.48,999",
+    "name": "Dubai",
+    "description": "City of Gold"
+  },
+  {
+    "id": 5,
+    "img": "Sydney.png",
+    "price": "From Rs.1,15,500",
+    "name": "Sydney",
+    "description": "Harbour City"
+  },
+  {
+    "id": 6,
+    "img": "Zurich.png",
+    "price": "From Rs.1,30,000",
+    "name": "Zurich",
+    "description": "Swiss Paradise"
+  },
+  {
+    "id": 7,
+    "img": "LA.jpeg",
+    "price": "From Rs.1,20,000",
+    "name": "Los Angeles",
+    "description": "Hollywood Experience"
+  },
+  {
+    "id": 8,
+    "img": "Berlin.png",
+    "price": "From Rs.87,000",
+    "name": "Berlin",
+    "description": "History & Culture"
+  },
+  {
+    "id": 9,
+    "img": "Cape-Town.png",
+    "price": "From Rs.95,000",
+    "name": "Cape Town",
+    "description": "Beaches & Mountains"
+  }
+]
+

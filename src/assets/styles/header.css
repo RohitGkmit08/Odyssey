@@ -4,23 +4,29 @@
   align-items: center;
   padding: 20px 40px;
   background: var(--black);
+  border-bottom: 1px solid var(--white);
 }
+
 .logo {
   font-size: 24px;
   font-weight: bold;
   color: var(--white);
 }
+
 .nav-links {
   display: flex;
   gap: 30px;
 }
+
 .nav-links a {
   color: var(--white);
   text-decoration: none;
   padding: 8px 16px;
   border-radius: 6px;
   transition: all 0.2s ease-in-out;
+  white-space: nowrap;
 }
+
 .nav-links a:hover {
   background: var(--overlay-light);
   color: var(--white);
@@ -32,11 +38,13 @@
     gap: 15px;
     padding: 15px 20px;
   }
+
   .nav-links {
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
   }
+
   .nav-links a {
     font-size: 14px;
     padding: 6px 10px;
@@ -47,9 +55,11 @@
   .logo {
     font-size: 20px;
   }
+
   .nav-links {
     gap: 10px;
   }
+
   .nav-links a {
     font-size: 12px;
     padding: 5px 8px;
