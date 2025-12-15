@@ -4,8 +4,10 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 
 const connectDB = require("./config/db");
+const destinationsRoutes = require("./routes/destinations.routes");
 
 const app = express();
+
 connectDB();
 
 mongoose.connection.once("open", () => {
@@ -19,7 +21,9 @@ mongoose.connection.on("error", (err) => {
 app.use(cors());
 app.use(express.json());
 
-app.listen(process.env.PORT, () =>
-  console.log(`Server running on http://localhost:${process.env.PORT}`)
-);
+app.use("/api/destinations", destinationsRoutes);
 
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
