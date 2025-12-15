@@ -1,30 +1,38 @@
 const DB_NAME = "OdysseyDB";
 const DB_VERSION = 1;
 const STORE_NAME = "destinations";
+
 const isManagementPage = window.location.pathname.includes("/pages/destinations.html");
-const DATA_URL = isManagementPage? "../assets/data/destinations.json": "./assets/data/destinations.json";
+const DATA_URL = isManagementPage
+  ? "../assets/data/destinations.json"
+  : "./assets/data/destinations.json";
 
 let db;
 let cardsGrid;
 
-const transaction = (mode) => db.transaction(STORE_NAME, mode).objectStore(STORE_NAME);
+const transaction = (mode) =>
+  db.transaction(STORE_NAME, mode).objectStore(STORE_NAME);
 
 function openDatabase() {
   return new Promise((resolve, reject) => {
     const req = indexedDB.open(DB_NAME, DB_VERSION);
 
     req.onerror = () => reject(req.error);
+
     req.onsuccess = () => {
       db = req.result;
       resolve(db);
     };
 
     req.onupgradeneeded = (e) => {
-      const store = e.target.result.createObjectStore(STORE_NAME, {
-        keyPath: "id",
-        autoIncrement: true,
-      });
-      store.createIndex("name", "name");
+      const database = e.target.result;
+      if (!database.objectStoreNames.contains(STORE_NAME)) {
+        const store = database.createObjectStore(STORE_NAME, {
+          keyPath: "id",
+          autoIncrement: true,
+        });
+        store.createIndex("name", "name");
+      }
     };
   });
 }
@@ -53,9 +61,10 @@ const updateDestination = (id, updates) =>
 
     getReq.onsuccess = () => {
       if (!getReq.result) return reject(new Error("Not found"));
-      const updated = { ...getReq.result, ...updates };
 
+      const updated = { ...getReq.result, ...updates };
       const putReq = store.put(updated);
+
       putReq.onsuccess = () => {
         resolve(putReq.result);
         loadAndRenderDestinations();
@@ -113,10 +122,14 @@ async function loadAndRenderDestinations() {
       list = await getAllDestinations();
     }
 
-    renderCards(list); 
+    if (window.renderCards) {
+      window.renderCards(list);
+    }
   } catch (err) {
     console.error(err);
-    if (cardsGrid) cardsGrid.innerHTML = `<p>Failed to load destinations.</p>`;
+    if (cardsGrid) {
+      cardsGrid.innerHTML = `<p>Failed to load destinations.</p>`;
+    }
   }
 }
 
@@ -127,8 +140,6 @@ async function init() {
 
     await openDatabase();
     await loadAndRenderDestinations();
-    console.log("INIT: running init()");
-
   } catch (err) {
     console.error("Init failed", err);
   }
