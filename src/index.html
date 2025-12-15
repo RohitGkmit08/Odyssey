@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./assets/styles/main.css" />
-  <script src="./JS/cards.js"></script>
+  <script src="./JS/cards.js" defer></script>
   <title>Odyssey</title>
- 
 </head>
 
 <body>
+
   <header>
     <div class="header-container">
       <div class="logo">ODYSSEY</div>
@@ -44,6 +44,7 @@
     <div class="destinations-container">
       <h2 class="destinations-title">Top Destinations</h2>
 
+      <!-- Cards rendered dynamically via cards.js -->
       <div class="cards-grid" id="cardsGrid"></div>
     </div>
   </section>
