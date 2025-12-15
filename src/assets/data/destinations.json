@@ -9,7 +9,7 @@
   {
     "id": 2,
     "img": "Tokyo.png",
-    "price": "From RS.1,05,000",
+    "price": "From Rs.1,05,000",
     "name": "Tokyo",
     "description": "Tradition & Technology"
   },
@@ -63,4 +63,3 @@
     "description": "Beaches & Mountains"
   }
 ]
-
