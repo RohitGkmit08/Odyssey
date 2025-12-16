@@ -1,13 +1,19 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const destinationSchema = new mongoose.Schema(
   {
-    name: { type: String, required: true },
-    price: { type: String, required: true },
-    img: { type: String, required: true },
-    description: { type: String, required: true },
+    name: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    description: String,
+    price: String,
+    image: String,
   },
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Destination", destinationSchema);
+const Destination = mongoose.model("Destination", destinationSchema);
+
+export default Destination;
